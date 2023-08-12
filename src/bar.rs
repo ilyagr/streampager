@@ -44,7 +44,7 @@ pub(crate) enum BarStyle {
 impl BarStyle {
     fn background_color(self) -> AnsiColor {
         match self {
-            BarStyle::Normal => AnsiColor::Grey,
+            BarStyle::Normal => AnsiColor::Black,
             BarStyle::Information => AnsiColor::Teal,
             BarStyle::Warning => AnsiColor::Olive,
             BarStyle::Error => AnsiColor::Maroon,
