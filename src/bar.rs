@@ -44,7 +44,7 @@ pub(crate) enum BarStyle {
 impl BarStyle {
     fn background_color(self) -> AnsiColor {
         match self {
-            BarStyle::Normal => AnsiColor::Silver,
+            BarStyle::Normal => AnsiColor::Grey,
             BarStyle::Information => AnsiColor::Teal,
             BarStyle::Warning => AnsiColor::Olive,
             BarStyle::Error => AnsiColor::Maroon,
@@ -78,7 +78,7 @@ impl Bar {
             y: Position::Absolute(row),
         });
         let bar_attribs = CellAttributes::default()
-            .set_foreground(AnsiColor::Black)
+            .set_foreground(AnsiColor::White)
             .set_background(self.style.background_color())
             .clone();
 
