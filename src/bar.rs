@@ -44,10 +44,10 @@ pub(crate) enum BarStyle {
 impl BarStyle {
     fn background_color(self) -> AnsiColor {
         match self {
-            BarStyle::Normal => AnsiColor::Black,
-            BarStyle::Information => AnsiColor::Teal,
-            BarStyle::Warning => AnsiColor::Olive,
-            BarStyle::Error => AnsiColor::Maroon,
+            BarStyle::Normal => AnsiColor::Navy,      // Or Teal,
+            BarStyle::Information => AnsiColor::Teal, // Seems to never be used
+            BarStyle::Warning => AnsiColor::Olive,    // Seems to never be used
+            BarStyle::Error => AnsiColor::Maroon,     // Seems to never be used
         }
     }
 }
@@ -78,7 +78,7 @@ impl Bar {
             y: Position::Absolute(row),
         });
         let bar_attribs = CellAttributes::default()
-            .set_foreground(AnsiColor::White)
+            .set_foreground(AnsiColor::Black)
             .set_background(self.style.background_color())
             .clone();
 
