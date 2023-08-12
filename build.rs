@@ -4,8 +4,6 @@ use std::io::{self, Read, Write};
 use std::path::Path;
 use std::process;
 
-use clap::Shell;
-
 #[path = "src/bin/sp/app.rs"]
 mod app;
 
